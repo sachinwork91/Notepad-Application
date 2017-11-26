@@ -24,7 +24,7 @@ import java.util.ArrayList;
  */
 public class StartListFragment extends ListFragment  {
 
- private static final String MODIFIED_CATEGORY="Modified Category";
+    private static final String MODIFIED_CATEGORY="Modified Category";
  private ArrayList<MyNote> myNotes;
  private AdapterForNote adapterForNote;
     public String searchtext;

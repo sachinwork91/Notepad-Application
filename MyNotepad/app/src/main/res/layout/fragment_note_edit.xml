@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="12dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="#f9f9f9"
+    >
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editNoteButton"
+        android:src="@drawable/p"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="15dp"
+        />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noteScrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/editNoteButton"
+        android:layout_alignBottom="@+id/editNoteButton"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:inputType="text"
+            android:id="@+id/editNoteTitle"
+            android:hint="Title"
+            />
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noteScrollView"
+
+        android:id="@+id/messageScrollView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="4dp"></ScrollView>
+
+    <!-- <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/boldItalics"
+         android:text="boldItaclics"
+
+         android:layout_alignParentBottom="true"
+         android:layout_toLeftOf="@+id/saveNote"
+         android:layout_toStartOf="@+id/saveNote" /> -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveNote"
+        android:text="@string/save_note_button"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" /><!--android:layout_alignEnd="@+id/messageScrollView"              Removing this as taking full space-->
+
+
+    <!-- <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/colorBlue"
+         android:text="@string/color_blue"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:layout_alignEnd="@+id/saveNote"
+         />-->
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="color"
+        android:textOn="Uncolor"
+        android:id="@+id/colorBlue"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="BOLD"
+        android:textOn="Unbold"
+        android:id="@+id/boldItalics"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/messageScrollView"
+        android:layout_alignStart="@+id/messageScrollView" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AddImage"
+        android:id="@+id/addimg"
+        android:layout_above="@+id/saveNote"
+        android:layout_alignLeft="@+id/boldItalics"
+        android:layout_alignStart="@+id/boldItalics"
+        android:clickable="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="3"
+        android:text="New Text"
+        android:id="@+id/editNoteMessage"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:background="@null"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:hint="Your myNote Comes here"
+        android:layout_alignTop="@+id/messageScrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button" />
+
+</RelativeLayout>
